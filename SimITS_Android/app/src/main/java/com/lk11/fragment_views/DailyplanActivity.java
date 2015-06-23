@@ -29,7 +29,7 @@ public class DailyplanActivity extends Fragment implements View.OnClickListener 
     private RelativeLayout slideMain_Layout;
     private FrameLayout.LayoutParams slideMenu_LayoutParams;
     private int slideMenuWidth;
-    private static boolean isSlideExpanded;
+    private boolean isSlideExpanded;
 
     private Button btn_left;
 
@@ -39,10 +39,10 @@ public class DailyplanActivity extends Fragment implements View.OnClickListener 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View rootview = inflater.inflate(R.layout.activity_dailyplan,container, false);
         rootView = rootview;
+        isSlideExpanded = false;
         initSlideMenu();
         return rootview;
     }
-
 
     private void initSlideMenu(){
         dpMetrics = new DisplayMetrics();
