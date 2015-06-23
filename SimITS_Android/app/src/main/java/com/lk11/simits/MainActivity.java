@@ -2,6 +2,7 @@ package com.lk11.simits;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -22,11 +23,11 @@ import com.lk11.fragment_views.TrafficledStateGraphicActivity;
 import java.util.ArrayList;
 
 
-public class MainActivity extends FragmentActivity implements ActionBar.TabListener{
+public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
-    ViewSectionsPagerAdapter mViewSectionsPagerAdapter;
-    ViewPager mViewPager;
-    ActionBar actionBar;
+    private ViewSectionsPagerAdapter mViewSectionsPagerAdapter;
+    private ViewPager mViewPager;
+    private ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +45,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         mViewPager.setOnPageChangeListener(simpleOnPageChangeListener);
 
         actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(false);
+        actionBar.setHomeButtonEnabled(false);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         for (int i=0; i<mViewSectionsPagerAdapter.getCount(); i++){
