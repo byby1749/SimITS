@@ -2,19 +2,15 @@ package com.lk11.simits;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
-import android.app.Notification;
-import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
+import android.view.Gravity;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.Toast;
 
 import com.lk11.fragment_views.DailyplanActivity;
 import com.lk11.fragment_views.SignalmapActivity;
@@ -78,6 +74,15 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+
+        if (id == android.R.id.home) {
+
+            Toast toast = Toast.makeText(getApplicationContext(), "Home", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER,0,0);
+            toast.show();
+
             return true;
         }
 
