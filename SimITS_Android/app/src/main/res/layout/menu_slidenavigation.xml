@@ -1,12 +1,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/mainlayout_background">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="menu_slideNavigation"
         android:layout_gravity="center"/>
+    <ExpandableListView
+        android:id="@+id/slideMenu_ExpandableListView_SlideNavigation"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </ExpandableListView>
 
 </LinearLayout>

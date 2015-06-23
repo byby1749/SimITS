@@ -15,6 +15,7 @@ import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -31,7 +32,7 @@ public class DailyplanActivity extends Fragment implements View.OnClickListener 
     private int slideMenuWidth;
     private boolean isSlideExpanded;
 
-    private Button btn_left;
+    private ImageButton btn_left;
 
     private View rootView = null;
 
@@ -58,7 +59,7 @@ public class DailyplanActivity extends Fragment implements View.OnClickListener 
         slideMenu_Layout.setLayoutParams(slideMenu_LayoutParams);
 
 
-        btn_left = (Button)rootView.findViewById(R.id.slideAction_Button_DailyplanActivity);
+        btn_left = (ImageButton)rootView.findViewById(R.id.slideAction_Button_DailyplanActivity);
         btn_left.setOnClickListener(this);
     }
 
