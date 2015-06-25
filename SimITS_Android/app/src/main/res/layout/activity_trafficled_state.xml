@@ -9,6 +9,7 @@
 
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -16,7 +17,7 @@
         <!-- RING A -->
         <LinearLayout
             android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="5dp"
             android:layout_width="fill_parent"
             android:layout_height="60dp"
             android:orientation="horizontal"
@@ -55,7 +56,7 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp">
+            android:layout_marginTop="5dp">
             <TextView
                 android:layout_alignParentLeft="true"
                 android:layout_width="150dp"
@@ -65,12 +66,14 @@
                 android:layout_width="60dp"
                 android:layout_height="1dp"
                 android:layout_marginLeft="10dp"/>
+
             <SeekBar
                 android:id="@+id/seekRingA_SeekBar_TrafficLedText"
                 android:layout_width="230dp"
-                android:layout_height="30dp"
+                android:layout_height="0dp"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"/>
+
             <TextView
                 style="@style/InfoTextViewStyle_null" />
             <TextView
@@ -83,7 +86,7 @@
         <!-- RING B -->
         <LinearLayout
             android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="15dp"
             android:layout_width="fill_parent"
             android:layout_height="38dp"
             android:orientation="horizontal"
@@ -135,7 +138,7 @@
             <SeekBar
                 android:id="@+id/seekRingB_SeekBar_TrafficLedText"
                 android:layout_width="230dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"/>
             <TextView
@@ -150,7 +153,7 @@
         <!-- LED INFO -->
         <LinearLayout
             android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="30dp"
             android:layout_width="fill_parent"
             android:layout_height="38dp"
             android:orientation="horizontal"
@@ -184,20 +187,20 @@
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
         android:background="@color/button_material_light"/>
 
 
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:orientation="vertical">
 
         <!-- Config Info  -->
         <LinearLayout
             android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="15dp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -249,7 +252,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_alignParentTop="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="20dp"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -259,7 +262,7 @@
                         android:text="모순제어 미사용"/>
                     <TextView
                         style="@style/InfoTextViewStyle"
-                        android:text="시차제자회전 미수"/>
+                        android:text="시차제좌회전 미수"/>
                     <TextView
                         style="@style/InfoTextViewStyle"
                         android:text="운영맵 번호 일반제"/>
@@ -268,9 +271,157 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+        <!-- End Config Info  -->
 
+
+
+        <!-- State Info  -->
+        <LinearLayout
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|bottom">
+            <RelativeLayout
+                android:layout_width="260dp"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:id="@+id/stateInfoTitle_TrafficLedText"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:text=""/>
+                <TextView
+                    android:layout_toRightOf="@id/stateInfoTitle_TrafficLedText"
+                    android:gravity="center"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textSize="15dp"
+                    android:text="상태 정보"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="0dp">
+                <LinearLayout
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|bottom">
+                    <TextView
+                        style="@style/InfoTextViewStyle_green"
+                        android:text="상태 정상"/>
+                    <TextView
+                        style="@style/InfoTextViewStyle_green"
+                        android:text="점멸원인 정상"/>
+                    <TextView
+                        style="@style/InfoTextViewStyle_green"
+                        android:text="PP상태 정상"/>
+                    <TextView
+                        style="@style/InfoTextViewStyle_green"
+                        android:text="조광제어 정상"/>
+               </LinearLayout>
+                <LinearLayout
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|bottom">
+                    <TextView
+                        style="@style/InfoTextViewStyle_green"
+                        android:text="온라인통신 정상"/>
+                    <TextView
+                        style="@style/InfoTextViewStyle_red"
+                        android:text="MCU-SCU통신 오류"/>
+                    <TextView
+                        style="@style/InfoTextViewStyle_green"
+                        android:text="전원오류 정상"/>
+                    <TextView
+                        style="@style/InfoTextViewStyle_green"
+                        android:text="DB상태 정상"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- End State Info  -->
+
+        <!-- Unbalance Info  -->
+        <LinearLayout
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|bottom">
+            <RelativeLayout
+                android:layout_width="260dp"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:id="@+id/unbalanceInfoTitle_TrafficLedText"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:text=""/>
+                <TextView
+                    android:layout_toRightOf="@id/unbalanceInfoTitle_TrafficLedText"
+                    android:gravity="center"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textSize="15dp"
+                    android:text="모순 정보"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="0dp">
+                <LinearLayout
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|bottom">
+                    <TextView
+                        style="@style/InfoTextViewStyle_green"
+                        android:text="모순 정상"/>
+                    <TextView
+                        style="@style/InfoTextViewStyle_doublewidth"
+                        android:text="Error LSU NO : N/A"/>
+                    <TextView
+                        style="@style/InfoTextViewStyle_null"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|bottom">
+                    <TextView
+                        style="@style/InfoTextViewStyle_null" />
+                    <TextView
+                        style="@style/InfoTextViewStyle_doublewidth"
+                        android:text="Error CIRCUIT NO : N/A"/>
+                    <TextView
+                        style="@style/InfoTextViewStyle_null"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- End unbalance Info  -->
 
     </LinearLayout>
-
 
 </LinearLayout>
