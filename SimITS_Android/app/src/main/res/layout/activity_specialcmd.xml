@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:layout_marginTop="20dip"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
@@ -51,23 +51,291 @@
             android:textOff="모순 RESET"/>
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:orientation="vertical">
-    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/controlCmdGroup_layout_Specialcmd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/groupbox_bg"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ctrCmdTitle_Textview_SpecialCmd"
+            style="@style/groupbox_head"
+            android:text="제어 명령 선택"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/sodungCtr_Toggle_SpecialCmd"
+                style="@style/toggleButton"
+                android:layout_below="@id/ctrCmdTitle_Textview_SpecialCmd"
+                android:textOn="소등 제어"
+                android:textOff="소등 제어"/>
+
+            <ToggleButton
+                android:id="@+id/jummyulCtr_Toggle_SpecialCmd"
+                style="@style/toggleButton"
+                android:layout_below="@id/ctrCmdTitle_Textview_SpecialCmd"
+                android:layout_toRightOf="@id/sodungCtr_Toggle_SpecialCmd"
+                android:textOn="점멸 제어"
+                android:textOff="점멸 제어"/>
+
+            <ToggleButton
+                android:id="@+id/jokyangCtr_Toggle_SpecialCmd"
+                style="@style/toggleButton"
+                android:layout_below="@id/ctrCmdTitle_Textview_SpecialCmd"
+                android:layout_toRightOf="@id/jummyulCtr_Toggle_SpecialCmd"
+                android:textOn="조광 제어"
+                android:textOff="조광 제어"/>
+
+            <ToggleButton
+                android:id="@+id/mosunCtr_Toggle_SpecialCmd"
+                style="@style/toggleButton"
+                android:layout_below="@id/ctrCmdTitle_Textview_SpecialCmd"
+                android:layout_toRightOf="@id/jokyangCtr_Toggle_SpecialCmd"
+                android:textOn="모순 제어"
+                android:textOff="모순 제어"/>
+
+            <ToggleButton
+                android:id="@+id/gamungCtr_Toggle_SpecialCmd"
+                style="@style/toggleButton"
+                android:layout_below="@id/ctrCmdTitle_Textview_SpecialCmd"
+                android:layout_toRightOf="@id/mosunCtr_Toggle_SpecialCmd"
+                android:textOn="감응 제어"
+                android:textOff="감응 제어"/>
+
+            <ToggleButton
+                android:id="@+id/bohengjaCtr_Toggle_SpecialCmd"
+                style="@style/toggleButton"
+                android:layout_below="@id/ctrCmdTitle_Textview_SpecialCmd"
+                android:layout_toRightOf="@id/gamungCtr_Toggle_SpecialCmd"
+                android:textOn="보행자 버튼"
+                android:textOff="보행자 버튼"/>
+        </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/rt1CmdGroup_layout_Specialcmd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/groupbox_bg"
+            android:orientation="horizontal" >
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:text="현시 생략"/>
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:numeric="integer"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rt2CmdGroup_layout_Specialcmd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/groupbox_bg"
+            android:orientation="horizontal" >
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:text="현시 생략"/>
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:numeric="integer"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rt3CmdGroup_layout_Specialcmd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/groupbox_bg"
+            android:orientation="horizontal" >
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="시차제 좌회전"/>
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:numeric="integer"/>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dip"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ppcCtrGroup_layout_Specialcmd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/groupbox_bg"
+                android:orientation="horizontal" >
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="PPC 제어"/>
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:prompt="@string/ppcCtr_prompt"
+                    android:entries="@array/ppcCtr_array"/>
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"/>
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dip"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/spillBackGroup_layout_Specialcmd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/groupbox_bg"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Spill Back"/>
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:prompt="@string/ppcCtr_prompt"
+                    android:entries="@array/ppcCtr_array"/>
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"/>
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/cmdCall_Button_SpecialCmd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="선택 명령 실행"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_toLeftOf="@id/cmdCall_Button_SpecialCmd"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="선택 초기화"/>
+
+    </RelativeLayout>
 
 </LinearLayout>

@@ -3,4 +3,10 @@
     <string name="action_settings">Settings</string>
 
     <color name="mainlayout_background">#FFFAFA</color>
+
+    <string name="ppcCtr_prompt">긴급차량서비스</string>
+    <string-array name="ppcCtr_array">
+        <item>긴급차량서비스</item>
+        <item>anytimewhere</item>
+    </string-array>
 </resources>
